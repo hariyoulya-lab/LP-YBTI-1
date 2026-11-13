@@ -1,0 +1,79 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: settings
+    label: "⚙️ Pengaturan Situs"
+    files:
+      - label: "Umum"
+        name: general
+        file: "src/_data/settings.json"
+        fields:
+          - { label: "Judul Situs", name: site_title, widget: string }
+          - { label: "Meta Deskripsi", name: meta_description, widget: text }
+          - { label: "Nomor WhatsApp", name: whatsapp_number, widget: string, hint: "Format: 628xxxxxxxxxx" }
+          - { label: "NPSN", name: npsn, widget: string }
+          - { label: "Alamat", name: address, widget: text }
+          - { label: "Email", name: email, widget: string }
+          - { label: "Facebook URL", name: facebook_url, widget: string, required: false }
+          - { label: "Instagram URL", name: instagram_url, widget: string, required: false }
+
+  - name: hero
+    label: "🏠 Hero Section"
+    files:
+      - label: "Hero"
+        name: hero
+        file: "src/_data/hero.json"
+        fields:
+          - { label: "Headline", name: headline, widget: string }
+          - { label: "Subheadline", name: subheadline, widget: text }
+          - { label: "Teks CTA", name: cta_text, widget: string }
+
+  - name: programs
+    label: "📚 Program"
+    files:
+      - label: "Daftar Program"
+        name: programs
+        file: "src/_data/programs.json"
+        fields:
+          - label: "Program"
+            name: items
+            widget: list
+            fields:
+              - { label: "Nama", name: name, widget: string }
+              - { label: "Deskripsi", name: description, widget: text }
+              - { label: "Ikon (emoji)", name: icon, widget: string }
+              - { label: "Warna (hex)", name: color, widget: string }
+
+  - name: testimonials
+    label: "💬 Testimoni"
+    files:
+      - label: "Daftar Testimoni"
+        name: testimonials
+        file: "src/_data/testimonials.json"
+        fields:
+          - label: "Testimoni"
+            name: items
+            widget: list
+            fields:
+              - { label: "Nama", name: name, widget: string }
+              - { label: "Peran", name: role, widget: string }
+              - { label: "Kutipan", name: quote, widget: text }
+
+  - name: faq
+    label: "❓ FAQ"
+    files:
+      - label: "Daftar FAQ"
+        name: faq
+        file: "src/_data/faq.json"
+        fields:
+          - label: "FAQ"
+            name: items
+            widget: list
+            fields:
+              - { label: "Pertanyaan", name: question, widget: string }
+              - { label: "Jawaban", name: answer, widget: text }

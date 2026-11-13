@@ -1,0 +1,100 @@
+---
+layout: layouts/base.njk
+title: Beranda
+---
+<section class="hero section">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ hero.headline }}</h1>
+      <p class="hero-sub">{{ hero.subheadline }}</p>
+      <div class="hero-actions">
+        <a href="/daftar/" class="btn btn-primary btn-lg">{{ hero.cta_text }}</a>
+        <a href="https://wa.me/{{ settings.whatsapp_number }}?text=Halo%20saya%20ingin%20konsultasi%20tentang%20Paket%20A%2FB%2FC" class="btn btn-outline btn-lg" target="_blank" rel="noopener">Chat WhatsApp</a>
+      </div>
+      <div class="trust-badges">
+        <span>NPSN {{ settings.npsn }}</span>
+        <span>Ijazah Resmi</span>
+        <span>Jadwal Fleksibel</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-orb"></div>
+      <div class="hero-card">
+        <div class="hero-card-icon">🎓</div>
+        <p>Program Paket A, B, C</p>
+        <span>Terakreditasi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section problem-section">
+  <div class="container">
+    <h2 class="section-title">Tertinggal Pendidikan? <span class="accent">Jangan Menyerah.</span></h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <h3>🚪 Pintu Tertutup</h3>
+        <p>Tanpa ijazah, kesempatan kerja dan pendidikan lanjutan sering terhambat.</p>
+      </div>
+      <div class="problem-card highlight">
+        <h3>🚀 Langkah Maju</h3>
+        <p>PKBM YBTI membuka jalan untuk meraih ijazah setara SD, SMP, dan SMA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="programs" class="section programs-section">
+  <div class="container">
+    <h2 class="section-title">Program <span class="accent">Kami</span></h2>
+    <div class="programs-grid">
+      {% for p in programs.items %}
+      <div class="program-card" style="--accent: {{ p.color }}">
+        <div class="program-icon">{{ p.icon }}</div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.description }}</p>
+        <a href="/daftar/?program={{ p.name | urlencode }}" class="btn btn-outline btn-sm">Pilih {{ p.name }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="section testimonials-section">
+  <div class="container">
+    <h2 class="section-title">Kata <span class="accent">Mereka</span></h2>
+    <div class="testimonials-grid">
+      {% for t in testimonials.items %}
+      <div class="testimonial-card">
+        <p class="quote">"{{ t.quote }}"</p>
+        <div class="testimonial-author">
+          <strong>{{ t.name }}</strong>
+          <span>{{ t.role }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section faq-section">
+  <div class="container">
+    <h2 class="section-title">Pertanyaan <span class="accent">Umum</span></h2>
+    <div class="faq-list">
+      {% for f in faq.items %}
+      <details class="faq-item">
+        <summary>{{ f.question }}</summary>
+        <p>{{ f.answer }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section cta-final">
+  <div class="container cta-box">
+    <h2>Raih Ijazah, Raih Masa Depan</h2>
+    <p>Konsultasikan kebutuhan pendidikan Anda dengan tim kami. Gratis!</p>
+    <a href="/daftar/" class="btn btn-primary btn-lg">Daftar Sekarang</a>
+  </div>
+</section>

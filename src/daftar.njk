@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+title: Daftar
+---
+<section class="section">
+  <div class="container form-container">
+    <h1>Formulir Pendaftaran</h1>
+    <p>Isi data berikut. Tim kami akan menghubungi Anda melalui WhatsApp.</p>
+    <form name="pendaftaran" method="POST" data-netlify="true" action="/terima-kasih/" class="form-card">
+      <input type="hidden" name="form-name" value="pendaftaran" />
+      <label>Nama Lengkap <input type="text" name="nama" required /></label>
+      <label>Nomor WhatsApp <input type="tel" name="whatsapp" required placeholder="08xxxxxxxxxx" /></label>
+      <label>Jenjang
+        <select name="jenjang" required>
+          <option value="">-- Pilih --</option>
+          <option>Paket A</option>
+          <option>Paket B</option>
+          <option>Paket C</option>
+        </select>
+      </label>
+      <label>Ijazah Terakhir <input type="text" name="ijazah" required /></label>
+      <label>Domisili <input type="text" name="domisili" required /></label>
+      <button type="submit" class="btn btn-primary btn-block">Kirim Pendaftaran</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "name": "Rina",
+      "role": "Alumni Paket C 2025",
+      "quote": "PKBM YBTI membantu saya menyelesaikan pendidikan tanpa meninggalkan pekerjaan. Tutornya sabar dan materi mudah dipahami."
+    },
+    {
+      "name": "Andi",
+      "role": "Alumni Paket B 2024",
+      "quote": "Jadwal fleksibel dan proses administrasi cepat. Sekarang saya bisa melanjutkan ke SMK impian."
+    },
+    {
+      "name": "Sari",
+      "role": "Orang Tua Peserta",
+      "quote": "Anak saya lebih percaya diri setelah mengikuti program Paket A. Lingkungan belajarnya nyaman."
+    }
+  ]
+}

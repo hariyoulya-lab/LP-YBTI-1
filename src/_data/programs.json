@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "name": "Paket A",
+      "description": "Setara SD. Program pembelajaran dasar yang fleksibel untuk anak dan dewasa.",
+      "icon": "📘",
+      "color": "#22D3EE"
+    },
+    {
+      "name": "Paket B",
+      "description": "Setara SMP. Lanjutkan pendidikan dengan kurikulum adaptif dan tutor berpengalaman.",
+      "icon": "🎓",
+      "color": "#E7B84B"
+    },
+    {
+      "name": "Paket C",
+      "description": "Setara SMA. Raih ijazah SMA untuk melanjutkan ke perguruan tinggi atau dunia kerja.",
+      "icon": "🏛️",
+      "color": "#1E4FB8"
+    }
+  ]
+}
